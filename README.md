@@ -33,10 +33,3 @@ This project develops a Python-based application designed to analyze historical 
 3. **Run:** Execute the script from your terminal:  
    Bash  
    python nifty\_predictor.py
-
-**Important Notes:**
-
-* **API Key:** The `GEMINI_API_KEY` is left as an empty string (`""`). In the Canvas environment, this will be automatically handled. If you run this code outside Canvas, you would need to replace `""` with your actual Google Cloud API key that has access to the Gemini API.  
-* **Mock Data:** The `get_mock_nifty_data()` function provides dummy data. For a real trading application, you would replace `fetch_nifty_data()` with actual API calls to retrieve live or historical stock data. Libraries like `yfinance` or dedicated financial data APIs are common choices.  
-* **LLM Limitations:** Remember the disclaimer\! LLMs are powerful but are not infallible financial advisors. Their predictions are based on patterns they've learned from vast amounts of text data, not necessarily deep financial market understanding.  
-* **Asynchronous Execution:** The `get_llm_prediction` and `main` functions are `async`. This is because API calls are I/O bound operations, and `asyncio` helps manage them efficiently. The `asyncio.run(main())` line at the end handles running the asynchronous code.
